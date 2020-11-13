@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 import { Card } from '../state/game.models';
+import { select, Store } from '@ngrx/store';
+import { GameState } from '../state/game.reducer';
+import { Observable, of, Subscription } from 'rxjs';
+
+import * as gameActions from "../state/game.actions"
+import * as fromGame from '../state/game.selectors';
 
 
 @Component({
@@ -10,16 +14,16 @@ import { Card } from '../state/game.models';
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent implements OnInit {
-  cardsInPlay: Card[] = [];
-  jsonUrl = 'http://localhost:3000/';
+  allCards$: Observable<Card[]> = of([]);
 
-  constructor() {}
+  constructor(private store: Store<GameState>) {}
 
   ngOnInit(): void {
-    console.log("on map")
-    // this.http
-    //   .get<Card[]>(this.jsonUrl, {})
-    //   .subscribe((cards) => (this.cardsInPlay = cards));
+    console.log('on map');
+    this.store.dispatch(gameActions.fetchAllCards());
+  }
+
+  newGame() {
+    this.allCards$ = this.store.pipe(select(fromGame.getAllcards));
   }
 }
-  

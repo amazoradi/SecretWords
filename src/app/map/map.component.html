@@ -4,5 +4,9 @@
 </div>
 
 <div class="board">
-  <app-card></app-card>
-</div> 
+  <div *ngFor="let card of allCards$ | async">
+    <app-card></app-card>
+  </div>
+</div>
+
+<button (click)="newGame()">New Game</button>

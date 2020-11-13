@@ -1,0 +1,154 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "cardText": "Cat",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 2,
+      "cardText": "Laptop",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 3,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 4,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 5,
+      "cardText": "Laptop",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 6,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 7,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 8,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 9,
+      "cardText": "Laptop",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 10,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 11,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 12,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 13,
+      "cardText": "Laptop",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 14,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 15,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 16,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 17,
+      "cardText": "Laptop",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 18,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 19,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 20,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 21,
+      "cardText": "Laptop",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 22,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 23,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 24,
+      "cardText": "Guitar",
+      "cardType": null,
+      "isFlipped": false
+    },
+    {
+      "id": 25,
+      "cardText": "Succulant",
+      "cardType": null,
+      "isFlipped": false
+    }
+  ]
+}

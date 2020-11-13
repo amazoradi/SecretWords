@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid black;
+  width: 150px;
+  margin: 3% 0px;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.unselected {
+  background-color: tan;
+}

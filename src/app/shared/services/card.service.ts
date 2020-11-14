@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 import { Observable, pipe } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 
@@ -12,7 +12,8 @@ export class CardService {
   constructor(private http: HttpClient) {}
 
   getAllCards(): Observable<Card[]> {
-    const url = this.jsonUrl + '/cards';
+    const url = this.jsonUrl + 'cards';
+    console.log("in api call")
     return this.http.get<Card[]>(url).pipe(shareReplay());
   }
 }

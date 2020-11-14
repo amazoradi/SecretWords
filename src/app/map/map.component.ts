@@ -4,9 +4,8 @@ import { select, Store } from '@ngrx/store';
 import { GameState } from '../state/game.reducer';
 import { Observable, of, Subscription } from 'rxjs';
 
-import * as gameActions from "../state/game.actions"
+import * as gameActions from '../state/game.actions';
 import * as fromGame from '../state/game.selectors';
-
 
 @Component({
   selector: 'app-map',
@@ -24,6 +23,8 @@ export class MapComponent implements OnInit {
   }
 
   newGame() {
-    this.allCards$ = this.store.pipe(select(fromGame.getAllcards));
+    // this.allCards$ =
+    const cards = this.store.pipe(select(fromGame.getAllcards)).subscribe();
+    console.log(cards);
   }
 }

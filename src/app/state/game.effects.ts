@@ -4,7 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { of } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 
-import { CardService } from '../sharred/services/card.service';
+import { CardService } from '../shared/services/card.service';
 import * as gameActions from './game.actions';
 
 @Injectable()
@@ -18,6 +18,7 @@ export class GameEffects {
   fetchAllCards$ = this.actions$.pipe(
     ofType(gameActions.fetchAllCards),
     mergeMap((action) => {
+      console.log('in effect');
       return this.gameService.getAllCards();
     }),
     mergeMap((resp) => {

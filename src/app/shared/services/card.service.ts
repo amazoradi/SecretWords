@@ -14,6 +14,6 @@ export class CardService {
   getAllCards(): Observable<Card[]> {
     const url = this.jsonUrl + 'cards';
     console.log("in api call")
-    return this.http.get<Card[]>(url).pipe(shareReplay());
+    return this.http.get<Card[]>(url);
   }
 }

@@ -18,7 +18,6 @@ export class GameEffects {
   fetchAllCards$ = this.actions$.pipe(
     ofType(gameActions.fetchAllCards),
     mergeMap((action) => {
-      console.log('in effect');
       return this.gameService.getAllCards();
     }),
     mergeMap((resp) => {

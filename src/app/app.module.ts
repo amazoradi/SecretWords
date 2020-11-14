@@ -17,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     SharedModule,
-    StoreModule.forRoot(GameReducer),
+    StoreModule.forRoot({game: GameReducer}),
     StoreDevtoolsModule.instrument({}),
     EffectsModule.forRoot([GameEffects]),
   ],

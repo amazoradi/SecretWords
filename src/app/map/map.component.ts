@@ -17,14 +17,15 @@ export class MapComponent implements OnInit {
 
   constructor(private store: Store<GameState>) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     console.log('on map');
-    this.store.dispatch(gameActions.fetchAllCards());
+    
   }
 
   newGame() {
     // this.allCards$ =
-    const cards = this.store.pipe(select(fromGame.getAllcards)).subscribe();
-    console.log(cards);
+    this.store.dispatch(gameActions.fetchAllCards());
+    this.allCards$ = this.store.pipe(select(fromGame.getAllcards));
+    console.log("hello", this.allCards$);
   }
 }

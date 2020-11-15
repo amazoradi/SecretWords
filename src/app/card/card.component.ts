@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Card } from '../state/game.models';
 @Component({
@@ -7,9 +7,9 @@ import { Card } from '../state/game.models';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
+  @Input() public card: Card
   constructor(
-    @Inject(MAT_DIALOG_DATA) public card: Card
     ) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 }

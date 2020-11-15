@@ -1,12 +1,15 @@
-<p>Here is the map:</p>
 <div>
   <p>Current Score: Red: 0, Blue: 0</p>
 </div>
 
 <div class="board">
   <div *ngFor="let card of allCards$ | async">
-    <app-card></app-card>
+    <div class="card unselected">
+      <p (click)="cardClick(card)">
+        {{ card.cardText }}
+        {{card.id}}
+      </p>
+    </div>
   </div>
 </div>
-
 <button (click)="newGame()">New Game</button>

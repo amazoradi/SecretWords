@@ -45,9 +45,13 @@ export class GameEffects {
         payloadB.push(removedCardB);
       }
 
+      let assissinCard = totalCardArray.splice( (Math.floor(Math.random() * totalCardArray.length -1), 1)).pop()
+
+
       return [
         gameActions.setTeamACards({ payload: paylaodA }),
         gameActions.setTeamBCards({ payload: payloadB }),
+        gameActions.setAssissinCard({payload: assissinCard})
       ];
     })
   );

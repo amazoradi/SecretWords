@@ -41,6 +41,10 @@ export const gameReducer = createReducer(
   on(gameActions.setTeamBCards, (state, { payload }) => ({
     ...state,
     teamBCards: payload,
+  })),
+  on(gameActions.setAssissinCard, (state, { payload }) => ({
+    ...state,
+    assasinCard: payload,
   }))
 );
 

@@ -7,16 +7,21 @@ export const fetchAllCards = createAction(
 );
 
 export const fetchAllCardsSuccess = createAction(
-  '[Map component] Fetch all cards Success',
+  '[Game Effect] Fetch all cards Success',
   props<{ payload: Card[] }>()
 );
 
 export const setTeamACards = createAction(
-  '[Map component] Set Team A Cards',
+  '[Game Effect] Set Team A Cards',
   props<{ payload: Card[] }>()
 );
 
 export const setTeamBCards = createAction(
-  '[Map component] Set Team B Cards',
+  '[Game Effect] Set Team B Cards',
   props<{ payload: Card[] }>()
+);
+
+export const setAssissinCard = createAction(
+  '[Game Effect] Set Assisin Card',
+  props<{ payload: Card }>()
 );

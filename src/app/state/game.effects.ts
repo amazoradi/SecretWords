@@ -29,20 +29,20 @@ export class GameEffects {
   fetchAllCardsSuccess$ = this.actions$.pipe(
     ofType(gameActions.fetchAllCardsSuccess),
     switchMap((action) => {
-      let totalCardArray = action.payload;
+      let totalCardArray = action.payload.slice();
       let paylaodA = [];
       let payloadB = [];
 
       for (let i = 0; i < 8; i++) {
         let randomNumber = Math.floor(Math.random() * totalCardArray.length);
-        paylaodA.push(totalCardArray[randomNumber]);
-        totalCardArray.slice(randomNumber, 1);
+        let removedCard = totalCardArray.splice(randomNumber - 1, 1).pop();
+        paylaodA.push(removedCard);
       }
 
       for (let j = 0; j < 7; j++) {
         let randomNumberB = Math.floor(Math.random() * totalCardArray.length);
-        payloadB.push(totalCardArray[randomNumberB]);
-        totalCardArray.slice(randomNumberB, 1);
+        let removedCardB = totalCardArray.splice(randomNumberB - 1, 1).pop();
+        payloadB.push(removedCardB);
       }
 
       return [

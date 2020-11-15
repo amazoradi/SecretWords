@@ -4,12 +4,7 @@
 
 <div class="board">
   <div *ngFor="let card of allCards$ | async">
-    <div class="card unselected">
-      <p (click)="cardClick(card)">
-        {{ card.cardText }}
-        {{card.id}}
-      </p>
-    </div>
+    <app-card [card]="card"></app-card>
   </div>
 </div>
 <button (click)="newGame()">New Game</button>

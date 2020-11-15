@@ -19,15 +19,23 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {}
 
+  setColor(card: Card) {
+    console.log("in ngclass")
+  }
+
   cardClick(card: Card) {
     console.log(card);
+    card.isFlipped = true;
+
     // TODO: figure out if the card is in their list, change color and/or turn
   }
 
   newGame() {
     this.store.dispatch(gameActions.fetchAllCards());
     this.allCards$ = this.store.pipe(select(fromGame.getAllcards));
+  }
 
-    // TODO: figure out the map board and which cards go where
+  viewMapCard(){
+    //TODO: add a popup with a colored graphic
   }
 }
